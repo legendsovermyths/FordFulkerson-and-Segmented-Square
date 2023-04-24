@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <iostream>
 #include <algorithm>
 #include <stack>
 #include <limits>
@@ -44,6 +45,7 @@ int opt_segment[MAXN + 1];
 
 int main()
 {
+	freopen("input.txt", "r", stdin);
 	int N, i, j, k, interval;
 	long long x_sum, y_sum, xy_sum, xsqr_sum, num, denom;
 	double tmp, mn, C;
@@ -95,6 +97,14 @@ int main()
 	}
 
 	// find the cost of the optimal solution
+	for (int i = 1; i <= N; i++)
+	{
+		for (int j = 1; j <= N; j++)
+		{
+			cout << intercept[i][j] << " ";
+		}
+		cout << '\n';
+	}
 	OPT[0] = opt_segment[0] = 0;
 	for (j = 1; j <= N; j++)
 	{
@@ -109,6 +119,10 @@ int main()
 		}
 		OPT[j] = mn + C;
 		opt_segment[j] = k;
+	}
+	for (int i = 1; i <= N; i++)
+	{
+		cout << OPT[i] << " ";
 	}
 
 	printf("\nCost of the optimal solution : %lf\n", OPT[N]);
