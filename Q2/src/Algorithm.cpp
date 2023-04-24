@@ -95,8 +95,6 @@ void Algorithm::constructSolution()
         segments.push(i);
         segments.push(j);
     }
-
-    printf("\nAn optimal solution :\n");
     while (!segments.empty())
     {
         int i = segments.top();

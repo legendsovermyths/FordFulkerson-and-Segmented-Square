@@ -3,7 +3,8 @@
 
 int main()
 {
-    freopen("input.txt", "r", stdin);
+    freopen("../data/input.txt", "r", stdin);
+    freopen("../data/output.txt", "w", stdout);
     int numPoint;
     cin >> numPoint;
     vector<Point *> points;
@@ -18,5 +19,18 @@ int main()
     double cst = 0;
     cin >> cst;
     Algorithm *A = new Algorithm(points, numPoint, cst);
-    A->printSolution();
+    vector<pair<double, double>> slope = A->getSegments();
+    vector<vector<int>> startend = A->getintervals();
+    int numsegments = A->getNumSegments();
+    cout << numsegments << '\n';
+    for (int i = 0; i < numsegments; i++)
+    {
+        cout << slope[i].first << " " << slope[i].second << '\n';
+    }
+    for (int i = 0; i < numsegments; i++)
+    {
+        cout << startend[0][i] << " " << startend[1][i] << '\n';
+    }
+
+    // A->printSolution();
 }
