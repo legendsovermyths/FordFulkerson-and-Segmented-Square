@@ -60,13 +60,7 @@ void FordFulkerson::solve()
     parent = vector<int>(nodes + 1, 0), visited = vector<int>(nodes + 1, 0);
     while (dfs(source, dest, parent, threshold, visited))
     {
-      int flow = MAX, u = dest, v;
-      while (u != source)
-      {
-        v = parent[u];
-        flow = min(flow, residualGraph[v][u]);
-        u = parent[u];
-      }
+      int flow = threshold, u = dest, v;
       v = dest;
       while (v != source)
       {
