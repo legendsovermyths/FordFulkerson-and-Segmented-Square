@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "chrono": "cpp"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
