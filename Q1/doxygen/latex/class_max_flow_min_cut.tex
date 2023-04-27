@@ -1,0 +1,109 @@
+\hypertarget{class_max_flow_min_cut}{}\doxysection{Max\+Flow\+Min\+Cut Class Reference}
+\label{class_max_flow_min_cut}\index{MaxFlowMinCut@{MaxFlowMinCut}}
+
+
+Class for computing the maximum flow and minimum cut in a graph using the Ford-\/\+Fulkerson algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Max\+Flow\+Min\+Cut.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_max_flow_min_cut_ab7b650a0a5ff88a0176130a230003a0e}{Max\+Flow\+Min\+Cut}} (int n, vector$<$ vector$<$ int $>$ $>$ edges, int s, int t)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_max_flow_min_cut}{Max\+Flow\+Min\+Cut}} object with the given parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_max_flow_min_cut_a5482e7b00d2e2f4928cb1ce5a7a22d10}{get\+Max\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Computes and returns the maximum flow in the graph. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_max_flow_min_cut_a44625980824e914cfdcd84526c6aa65e}{get\+Min\+Cut}} ()
+\begin{DoxyCompactList}\small\item\em Computes and returns the minimum cut in the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for computing the maximum flow and minimum cut in a graph using the Ford-\/\+Fulkerson algorithm. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_max_flow_min_cut_ab7b650a0a5ff88a0176130a230003a0e}\label{class_max_flow_min_cut_ab7b650a0a5ff88a0176130a230003a0e}} 
+\index{MaxFlowMinCut@{MaxFlowMinCut}!MaxFlowMinCut@{MaxFlowMinCut}}
+\index{MaxFlowMinCut@{MaxFlowMinCut}!MaxFlowMinCut@{MaxFlowMinCut}}
+\doxysubsubsection{\texorpdfstring{MaxFlowMinCut()}{MaxFlowMinCut()}}
+{\footnotesize\ttfamily Max\+Flow\+Min\+Cut\+::\+Max\+Flow\+Min\+Cut (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{edges,  }\item[{int}]{s,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_max_flow_min_cut}{Max\+Flow\+Min\+Cut}} object with the given parameters. 
+
+Constructs a \mbox{\hyperlink{class_max_flow_min_cut}{Max\+Flow\+Min\+Cut}} object with the specified number of nodes, edges, source, and target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of nodes in the graph. \\
+\hline
+{\em edges} & A vector of vectors representing the edges in the graph. \\
+\hline
+{\em s} & The source node in the graph. \\
+\hline
+{\em t} & The sink node in the graph.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of nodes in the graph. \\
+\hline
+{\em edges} & The edges of the graph represented as an adjacency matrix. \\
+\hline
+{\em s} & The source node. \\
+\hline
+{\em t} & The target node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_max_flow_min_cut_a5482e7b00d2e2f4928cb1ce5a7a22d10}\label{class_max_flow_min_cut_a5482e7b00d2e2f4928cb1ce5a7a22d10}} 
+\index{MaxFlowMinCut@{MaxFlowMinCut}!getMaxFlow@{getMaxFlow}}
+\index{getMaxFlow@{getMaxFlow}!MaxFlowMinCut@{MaxFlowMinCut}}
+\doxysubsubsection{\texorpdfstring{getMaxFlow()}{getMaxFlow()}}
+{\footnotesize\ttfamily int Max\+Flow\+Min\+Cut\+::get\+Max\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes and returns the maximum flow in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The maximum flow in the graph.
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+The maximum flow in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_max_flow_min_cut_a44625980824e914cfdcd84526c6aa65e}\label{class_max_flow_min_cut_a44625980824e914cfdcd84526c6aa65e}} 
+\index{MaxFlowMinCut@{MaxFlowMinCut}!getMinCut@{getMinCut}}
+\index{getMinCut@{getMinCut}!MaxFlowMinCut@{MaxFlowMinCut}}
+\doxysubsubsection{\texorpdfstring{getMinCut()}{getMinCut()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ Max\+Flow\+Min\+Cut\+::get\+Min\+Cut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes and returns the minimum cut in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The minimum cut as a vector of vectors representing the edges of the cut.
+\end{DoxyReturn}
+
+
+The minimum cut is represented by a vector of two sets of nodes\+: the nodes on one side of the cut and the nodes on the other side of the cut.
+
+\begin{DoxyReturn}{Returns}
+The minimum cut in the graph. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_max_flow_min_cut_8hpp}{Max\+Flow\+Min\+Cut.\+hpp}}\item 
+\mbox{\hyperlink{_max_flow_min_cut_8cpp}{Max\+Flow\+Min\+Cut.\+cpp}}\end{DoxyCompactItemize}
