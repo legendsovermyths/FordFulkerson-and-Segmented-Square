@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run Python file
-for i in {6..10}
+for i in {5..261}
 do
     python3 ../scripts/GenerateFlow.py $i > output1.txt
 

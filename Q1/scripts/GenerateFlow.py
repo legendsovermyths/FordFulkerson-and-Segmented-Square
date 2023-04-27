@@ -123,7 +123,7 @@ class Graph:
 
 
 # Generate a random graph and write it to a file
-graph = generate_graph(int(sys.argv[1]), 10)
+graph = generate_graph(int(sys.argv[1]), 100)
 write_graph_to_file(graph, file_input)
 g = Graph(graph)
 # Compute the maximum flow using the Ford-Fulkerson algorithm and print it
