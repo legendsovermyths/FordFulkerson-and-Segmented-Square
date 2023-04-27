@@ -1,0 +1,128 @@
+\hypertarget{class_algorithm}{}\doxysection{Algorithm Class Reference}
+\label{class_algorithm}\index{Algorithm@{Algorithm}}
+
+
+Class that implements the segmented least squares algorithm for a set of points.  
+
+
+
+
+{\ttfamily \#include $<$Algorithm.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_algorithm_aede78daad69ebb0af80e05d90fbbb972}{Algorithm}} (vector$<$ \mbox{\hyperlink{class_point}{Point}} $\ast$ $>$ p, int n, double ct)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_algorithm}{Algorithm}} class. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ double, double $>$ $>$ \mbox{\hyperlink{class_algorithm_a673f93c9bfe510bc9118508370be233b}{get\+Segments}} ()
+\begin{DoxyCompactList}\small\item\em Returns the set of segments. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_algorithm_a7c58680f8e7623a88d6a471cf21fbfe2}{get\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Returns the total error for the set of segments. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_algorithm_a2efe25aef862ce59c5ec4044e8d2ae17}{get\+Errors}} ()
+\begin{DoxyCompactList}\small\item\em Returns the vector of errors for each segment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_algorithm_a9ffdd05c247f9d0cc846ee69f2d7177c}{get\+Num\+Segments}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of segments. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_algorithm_a2e1bf6f756f5ea6da05ae1d647b20475}{getintervals}} ()
+\begin{DoxyCompactList}\small\item\em Returns the intervals of the points that belong to each segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_algorithm_a4e7ab849e8a39bda2fe929c71e19814e}\label{class_algorithm_a4e7ab849e8a39bda2fe929c71e19814e}} 
+void {\bfseries print\+Solution} ()
+\begin{DoxyCompactList}\small\item\em Prints the solution to standard output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that implements the segmented least squares algorithm for a set of points. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_algorithm_aede78daad69ebb0af80e05d90fbbb972}\label{class_algorithm_aede78daad69ebb0af80e05d90fbbb972}} 
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{Algorithm()}{Algorithm()}}
+{\footnotesize\ttfamily Algorithm\+::\+Algorithm (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_point}{Point}} $\ast$ $>$}]{p,  }\item[{int}]{n,  }\item[{double}]{ct }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{class_algorithm}{Algorithm}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Vector containing the points \\
+\hline
+{\em n} & Number of points \\
+\hline
+{\em ct} & Cost for making segments \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_algorithm_a7c58680f8e7623a88d6a471cf21fbfe2}\label{class_algorithm_a7c58680f8e7623a88d6a471cf21fbfe2}} 
+\index{Algorithm@{Algorithm}!getError@{getError}}
+\index{getError@{getError}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily double Algorithm\+::get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the total error for the set of segments. 
+
+\begin{DoxyReturn}{Returns}
+Total error for the set of segments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithm_a2efe25aef862ce59c5ec4044e8d2ae17}\label{class_algorithm_a2efe25aef862ce59c5ec4044e8d2ae17}} 
+\index{Algorithm@{Algorithm}!getErrors@{getErrors}}
+\index{getErrors@{getErrors}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getErrors()}{getErrors()}}
+{\footnotesize\ttfamily vector$<$ double $>$ Algorithm\+::get\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the vector of errors for each segment. 
+
+\begin{DoxyReturn}{Returns}
+Vector of errors for each segment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithm_a2e1bf6f756f5ea6da05ae1d647b20475}\label{class_algorithm_a2e1bf6f756f5ea6da05ae1d647b20475}} 
+\index{Algorithm@{Algorithm}!getintervals@{getintervals}}
+\index{getintervals@{getintervals}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getintervals()}{getintervals()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ Algorithm\+::getintervals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the intervals of the points that belong to each segment. 
+
+\begin{DoxyReturn}{Returns}
+Vector of intervals for each segment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithm_a9ffdd05c247f9d0cc846ee69f2d7177c}\label{class_algorithm_a9ffdd05c247f9d0cc846ee69f2d7177c}} 
+\index{Algorithm@{Algorithm}!getNumSegments@{getNumSegments}}
+\index{getNumSegments@{getNumSegments}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getNumSegments()}{getNumSegments()}}
+{\footnotesize\ttfamily int Algorithm\+::get\+Num\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of segments. 
+
+\begin{DoxyReturn}{Returns}
+Number of segments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithm_a673f93c9bfe510bc9118508370be233b}\label{class_algorithm_a673f93c9bfe510bc9118508370be233b}} 
+\index{Algorithm@{Algorithm}!getSegments@{getSegments}}
+\index{getSegments@{getSegments}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getSegments()}{getSegments()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ double, double $>$ $>$ Algorithm\+::get\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the set of segments. 
+
+\begin{DoxyReturn}{Returns}
+Vector containing pairs of slope and intercept for each segment 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_algorithm_8hpp}{Algorithm.\+hpp}}\item 
+Algorithm.\+cpp\end{DoxyCompactItemize}
