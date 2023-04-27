@@ -1,0 +1,107 @@
+\hypertarget{class_bipartite_matching}{}\doxysection{Bipartite\+Matching Class Reference}
+\label{class_bipartite_matching}\index{BipartiteMatching@{BipartiteMatching}}
+
+
+Class for solving the maximum bipartite matching problem using the Ford-\/\+Fulkerson algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Bipartite\+Matching.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bipartite_matching_aa88d9cf7950d190b8dc25bfae2c0256f}{Bipartite\+Matching}} (vector$<$ vector$<$ int $>$ $>$ arr, int n)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_bipartite_matching}{Bipartite\+Matching}} object with the given parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bipartite_matching_a4d7c3d9f133eeac3476d70b600193928}{Bipartite\+Matching}} (vector$<$ vector$<$ int $>$ $>$ arr)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_bipartite_matching}{Bipartite\+Matching}} object with the given adjacency matrix. The number of nodes is automatically determined from the matrix size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bipartite_matching_a9eebad706c81335ff3ac50b157ddb754}{Get\+Max\+Bipartite\+Matching}} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns the maximum bipartite matching size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for solving the maximum bipartite matching problem using the Ford-\/\+Fulkerson algorithm. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bipartite_matching_aa88d9cf7950d190b8dc25bfae2c0256f}\label{class_bipartite_matching_aa88d9cf7950d190b8dc25bfae2c0256f}} 
+\index{BipartiteMatching@{BipartiteMatching}!BipartiteMatching@{BipartiteMatching}}
+\index{BipartiteMatching@{BipartiteMatching}!BipartiteMatching@{BipartiteMatching}}
+\doxysubsubsection{\texorpdfstring{BipartiteMatching()}{BipartiteMatching()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bipartite\+Matching\+::\+Bipartite\+Matching (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{arr,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_bipartite_matching}{Bipartite\+Matching}} object with the given parameters. 
+
+Constructs a \mbox{\hyperlink{class_bipartite_matching}{Bipartite\+Matching}} object from a given edge list and the number of nodes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A vector of vectors representing the adjacency matrix of the graph. \\
+\hline
+{\em n} & The number of nodes in the graph.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & The edge list representing the graph. \\
+\hline
+{\em n} & The number of nodes in the graph. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bipartite_matching_a4d7c3d9f133eeac3476d70b600193928}\label{class_bipartite_matching_a4d7c3d9f133eeac3476d70b600193928}} 
+\index{BipartiteMatching@{BipartiteMatching}!BipartiteMatching@{BipartiteMatching}}
+\index{BipartiteMatching@{BipartiteMatching}!BipartiteMatching@{BipartiteMatching}}
+\doxysubsubsection{\texorpdfstring{BipartiteMatching()}{BipartiteMatching()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bipartite\+Matching\+::\+Bipartite\+Matching (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{arr }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{class_bipartite_matching}{Bipartite\+Matching}} object with the given adjacency matrix. The number of nodes is automatically determined from the matrix size. 
+
+Constructs a \mbox{\hyperlink{class_bipartite_matching}{Bipartite\+Matching}} object from a given adjacency matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A vector of vectors representing the adjacency matrix of the graph.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & The adjacency matrix representing the graph. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bipartite_matching_a9eebad706c81335ff3ac50b157ddb754}\label{class_bipartite_matching_a9eebad706c81335ff3ac50b157ddb754}} 
+\index{BipartiteMatching@{BipartiteMatching}!GetMaxBipartiteMatching@{GetMaxBipartiteMatching}}
+\index{GetMaxBipartiteMatching@{GetMaxBipartiteMatching}!BipartiteMatching@{BipartiteMatching}}
+\doxysubsubsection{\texorpdfstring{GetMaxBipartiteMatching()}{GetMaxBipartiteMatching()}}
+{\footnotesize\ttfamily int Bipartite\+Matching\+::\+Get\+Max\+Bipartite\+Matching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates and returns the maximum bipartite matching size. 
+
+Calculates the maximum bipartite matching in the graph. If the graph is not bipartite, an error message is printed.
+
+\begin{DoxyReturn}{Returns}
+The maximum bipartite matching size.
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+The maximum bipartite matching. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_bipartite_matching_8hpp}{Bipartite\+Matching.\+hpp}}\item 
+\mbox{\hyperlink{_bipartite_matching_8cpp}{Bipartite\+Matching.\+cpp}}\end{DoxyCompactItemize}

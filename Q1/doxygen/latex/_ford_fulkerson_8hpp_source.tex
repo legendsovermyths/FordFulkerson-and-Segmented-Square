@@ -1,0 +1,37 @@
+\hypertarget{_ford_fulkerson_8hpp_source}{}\doxysection{Ford\+Fulkerson.\+hpp}
+\mbox{\hyperlink{_ford_fulkerson_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ FordFulkerson\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ FordFulkerson\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MAX\ 1073741824}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ford_fulkerson}{FordFulkerson}}\ \{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ nodes;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ vector<vector<int>>\ graph;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ vector<vector<int>>\ residualGraph;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ source;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ dest;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ solved\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ maxFlow\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ dfs(\textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{int}\ t,\ vector<int>\ \&parent,\ \textcolor{keywordtype}{int}\ threshold,\ vector<int>\ \&visited);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ solve();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_ford_fulkerson}{FordFulkerson}}(\textcolor{keywordtype}{int}\ n,\ vector<vector<int>>\ arr,\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{int}\ t);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_ford_fulkerson}{FordFulkerson}}(vector<vector<int>>\ arr);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ vector<vector<int>>\ \mbox{\hyperlink{class_ford_fulkerson_ad32b2d3559398c7a1d4855db2882f6ec}{getresidualgraph}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ford_fulkerson_a076a279efdded2401b51d0fc74258485}{getMaxFlow}}();}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
