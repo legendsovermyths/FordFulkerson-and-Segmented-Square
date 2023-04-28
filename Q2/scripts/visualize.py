@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 file_path1 = os.path.join(os.path.dirname(__file__), "../data/output.txt")
 file_path2 = os.path.join(os.path.dirname(__file__), "../data/input.txt")
+file_image = os.path.join(os.path.dirname(__file__), "../image/result6.png")
 
 
 def plot_least_segmented_square(
@@ -30,7 +31,7 @@ def plot_least_segmented_square(
             (start[0], start[1]),
             fontsize=10,
         )
-
+    plt.savefig(file_image)
     plt.show()
 
 
@@ -59,8 +60,6 @@ with open(file_path1, "r") as f:
         startSegment.append(se[0] - 1)
         endSegment.append(se[1] - 1)
 
-print(slopes)
-print(startSegment)
-print(endSegment)
+
 # plot the result
 plot_least_segmented_square(points, slopes, intercept, startSegment, endSegment)

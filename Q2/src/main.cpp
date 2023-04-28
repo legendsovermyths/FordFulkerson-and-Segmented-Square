@@ -32,5 +32,5 @@ int main()
         cout << startend[0][i] << " " << startend[1][i] << '\n';
     }
 
-    // A->printSolution();
+    A->printSolution();
 }

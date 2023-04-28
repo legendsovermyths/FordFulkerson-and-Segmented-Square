@@ -12,13 +12,16 @@
  * @param s The source node.
  * @param t The sink node.
  */
-FordFulkerson::FordFulkerson(int n, vector<vector<int>> arr, int s, int t) {
+FordFulkerson::FordFulkerson(int n, vector<vector<int>> arr, int s, int t)
+{
     nodes = n;
     source = s;
     dest = t;
     graph = vector<vector<int>>(nodes + 1, vector<int>(nodes + 1, 0));
     residualGraph = vector<vector<int>>(nodes + 1, vector<int>(nodes + 1, 0));
-    for (int i = 0; i < arr.size(); i++) {
+    int sz = arr.size();
+    for (int i = 0; i < sz; i++)
+    {
         graph[arr[i][0]][arr[i][1]] = arr[i][2];
         residualGraph[arr[i][0]][arr[i][1]] = arr[i][2];
     }
@@ -30,7 +33,8 @@ FordFulkerson::FordFulkerson(int n, vector<vector<int>> arr, int s, int t) {
  *
  * @param arr A vector of vectors representing the graph's adjacency matrix.
  */
-FordFulkerson::FordFulkerson(vector<vector<int>> arr) {
+FordFulkerson::FordFulkerson(vector<vector<int>> arr)
+{
     nodes = arr.size();
     source = 0;
     dest = nodes - 1;
@@ -48,15 +52,20 @@ FordFulkerson::FordFulkerson(vector<vector<int>> arr) {
  * @param visited A reference to the vector indicating whether a node has been visited.
  * @return True if an augmenting path is found, false otherwise.
  */
-bool FordFulkerson::dfs(int s, int t, vector<int> &parent, int threshold, vector<int> &visited) {
+bool FordFulkerson::dfs(int s, int t, vector<int> &parent, int threshold, vector<int> &visited)
+{
     visited[s] = 1;
-    if (s == t) {
+    if (s == t)
+    {
         return true;
     }
     bool rvalue = false;
     visited[s] = 1;
-    for (int j = 0; j < residualGraph[s].size(); j++) {
-        if (residualGraph[s][j] >= threshold && !visited[j]) {
+    int nd = residualGraph[s].size();
+    for (int j = 0; j < nd; j++)
+    {
+        if (residualGraph[s][j] >= threshold && !visited[j])
+        {
             parent[j] = s;
             rvalue |= dfs(j, t, parent, threshold, visited);
         }
@@ -69,7 +78,8 @@ bool FordFulkerson::dfs(int s, int t, vector<int> &parent, int threshold, vector
  *
  * @return The maximum flow value in the graph.
  */
-int FordFulkerson::getMaxFlow() {
+int FordFulkerson::getMaxFlow()
+{
     if (solved == 0)
         solve();
     int flow = this->maxFlow;
@@ -81,7 +91,8 @@ int FordFulkerson::getMaxFlow() {
  *
  * @return A vector of vectors representing the residual graph's adjacency matrix.
  */
-vector<vector<int>> FordFulkerson::getresidualgraph() {
+vector<vector<int>> FordFulkerson::getresidualgraph()
+{
     if (solved == 0)
         solve();
     vector<vector<int>> res = this->residualGraph;
@@ -92,24 +103,28 @@ vector<vector<int>> FordFulkerson::getresidualgraph() {
  * @brief Solves the maximum flow problem using the Ford-Fulkerson algorithm.
  * The result is stored in the object's member variables.
  */
-void FordFulkerson::solve() {
+void FordFulkerson::solve()
+{
     solved = 1;
     vector<int> parent(nodes + 1, 0);
     vector<int> visited(nodes + 1, 0);
     int maxFlow = 0;
     int threshold = MAX;
 
-    while (threshold > 0) {
+    while (threshold > 0)
+    {
         parent = vector<int>(nodes + 1, 0);
         visited = vector<int>(nodes + 1, 0);
 
-        while (dfs(source, dest, parent, threshold, visited)) {
+        while (dfs(source, dest, parent, threshold, visited))
+        {
             int flow = threshold;
             int u = dest;
             int v;
 
             v = dest;
-            while (v != source) {
+            while (v != source)
+            {
                 u = parent[v];
                 residualGraph[u][v] -= flow;
                 residualGraph[v][u] += flow;

@@ -18,7 +18,8 @@ using namespace std::chrono;
  * @param argv An array of command-line arguments.
  * @return The exit status of the program.
  */
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     // Redirecting standard input to read from a file
     freopen("../data/input.txt", "r", stdin);
 
@@ -30,7 +31,8 @@ int main(int argc, char *argv[]) {
     vector<int> temp(3);
     int edge;
     cin >> edge;
-    for (int i = 0; i < edge; i++) {
+    for (int i = 0; i < edge; i++)
+    {
         cin >> temp[0] >> temp[1] >> temp[2];
         edges.push_back(temp);
     }
@@ -46,6 +48,20 @@ int main(int argc, char *argv[]) {
     auto duration = duration_cast<microseconds>(stop - start);
 
     // Redirecting standard output to write to a file
+    vector<vector<int>> mincut = f->getMinCut();
+    int s1 = mincut[0].size(), s2 = mincut[1].size();
+    cout << "mincut is:" << '\n';
+    cout << "set 1:" << '\n';
+    for (int i = 0; i < s1; i++)
+    {
+        cout << mincut[0][i] << " ";
+    }
+    cout << "\nset 2:" << '\n';
+    for (int i = 0; i < s2; i++)
+    {
+        cout << mincut[1][i] << " ";
+    }
+    cout << '\n';
     freopen("../data/time.txt", "w", stdout);
     cout << duration.count();
 
