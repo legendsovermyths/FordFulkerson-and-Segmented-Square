@@ -9,7 +9,7 @@ Algorithm::Algorithm(vector<Point *> p, int n, double ct)
 {
     points = p, numPoints = n, cost = ct;
     preX[0] = preY[0] = preXY[0] = preXsqr[0] = 0;
-    sort(points.begin(), points.end(), compare);
+    sort(points.begin() + 1, points.end(), compare);
 }
 
 void Algorithm::leastSegmentedSquare()

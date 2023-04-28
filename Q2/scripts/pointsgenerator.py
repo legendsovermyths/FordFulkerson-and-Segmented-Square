@@ -20,11 +20,9 @@ def generate_points(n):
     return points
 
 
-# example usage: generate 10 points
-points = generate_points(int(sys.argv[1]))
+points = generate_points(20)
 with open(file_input, "w") as f:
-    f.write(sys.argv[1] + "\n")
+    f.write(str(20) + "\n")
     for x, y in points:
         f.write(f"{x} {y}\n")
-    f.write(str(random.randint(0, 10000)))
-print(sys.argv[1])
+    f.write(str(random.randint(0, 100)))

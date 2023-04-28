@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 file_path1 = os.path.join(os.path.dirname(__file__), "../data/output.txt")
 file_path2 = os.path.join(os.path.dirname(__file__), "../data/input.txt")
-file_image = os.path.join(os.path.dirname(__file__), "../image/result.png")
+file_image = os.path.join(os.path.dirname(__file__), "../image/res2124.png")
 
 
 def plot_least_segmented_square(
