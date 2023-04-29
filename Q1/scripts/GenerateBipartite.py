@@ -23,4 +23,4 @@ def generate_bipartite_graph(num_left_nodes, num_right_nodes, edge_probability):
             f.write(f"{x+1} {y+1}\n")
 
 
-generate_bipartite_graph(100, 112, 0.6)
+generate_bipartite_graph(5000, 5000, 0.0005)

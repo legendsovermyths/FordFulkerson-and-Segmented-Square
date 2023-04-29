@@ -37,6 +37,14 @@ int main(int argc, char *argv[])
         edges.push_back(temp);
     }
 
+    // BipartiteMatching *b = new BipartiteMatching(edges, des);
+    // cout << "Maximum matching is : " << b->GetMaxBipartiteMatching() << '\n';
+    // vector<pair<int, int>> res = b->GetPairwiseMatching();
+    // cout << "Matching is: \n";
+    // for (int i = 0; i < res.size(); i++)
+    // {
+    //     cout << res[i].first << " " << res[i].second << '\n';
+    // }
     // Creating MaxFlowMinCut object and computing the maximum flow
     MaxFlowMinCut *f = new MaxFlowMinCut(des, edges, 1, des);
     auto start = high_resolution_clock::now();
