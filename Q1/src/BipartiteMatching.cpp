@@ -157,11 +157,32 @@ int BipartiteMatching::GetMaxBipartiteMatching()
     if (bipartite == 0)
     {
         err();
-        return 0;
+        exit(EXIT_FAILURE);
     }
 
     f = new FordFulkerson(graph);
     maxMatching = f->getMaxFlow();
 
     return maxMatching;
+}
+vector<pair<int, int>> BipartiteMatching::GetPairwiseMatching()
+{
+    vector<pair<int, int>> res;
+    if (bipartite == 0)
+    {
+        err();
+        exit(EXIT_FAILURE);
+    }
+    vector<vector<int>> rGraph = f->getresidualgraph();
+    for (int i = 1; i <= nodes; i++)
+    {
+        for (int j = 1; j <= nodes; j++)
+        {
+            if (rGraph[i][j] == 1 && div[i] == 0)
+            {
+                res.push_back(make_pair(i, j));
+            }
+        }
+    }
+    return res;
 }

@@ -1,0 +1,5 @@
+Max Matching is: 3
+Matching is :
+1 7
+2 5
+3 6

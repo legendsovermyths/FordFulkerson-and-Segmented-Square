@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 {
     // Redirecting standard input to read from a file
     freopen("../data/input.txt", "r", stdin);
-
+    freopen("../data/output.txt", "w", stdout);
     // Parsing the destination node from command-line argument
     int des = atoi(argv[1]);
 

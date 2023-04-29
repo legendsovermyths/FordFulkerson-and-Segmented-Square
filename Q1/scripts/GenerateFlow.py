@@ -130,4 +130,4 @@ g = Graph(graph)
 source = 0
 sink = int(sys.argv[1]) - 1
 max_flow = g.FordFulkerson(source, sink)
-print(f"{int(max_flow)}")
+# print(f"{int(max_flow)}")
