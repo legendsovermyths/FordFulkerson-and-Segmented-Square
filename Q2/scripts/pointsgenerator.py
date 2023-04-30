@@ -8,7 +8,7 @@ file_input = os.path.join(os.path.dirname(__file__), "../data/input.txt")
 def generate_points(n):
     # generate a random slope and y-intercept for the line
     slope = random.uniform(-1, 1)
-    intercept = random.uniform(-10, 10)
+    intercept = random.uniform(-1, 1)
 
     # generate points with some deviation from the line
     points = []
@@ -20,9 +20,9 @@ def generate_points(n):
     return points
 
 
-points = generate_points(30)
+points = generate_points(50)
 with open(file_input, "w") as f:
-    f.write(str(30) + "\n")
+    f.write(str(50) + "\n")
     for x, y in points:
         f.write(f"{x} {y}\n")
-    f.write(str(random.randint(80, 300)))
+    f.write(str(random.randint(100, 300)))
