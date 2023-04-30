@@ -10,7 +10,7 @@
  * @param a The x coordinate of the point
  * @param b The y coordinate of the point
  */
-Point::Point(int a, int b)
+Point::Point(double a, double b)
 {
     x = a, y = b;
 }

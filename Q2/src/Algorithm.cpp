@@ -73,11 +73,11 @@ void Algorithm::printSolution()
 {
     if (solved == 0)
         constructSolution();
-    printf("\nCost of the optimal solution : %Lf\n", opt[numPoints]);
+    printf("\nCost of the optimal solution : %f\n", opt[numPoints]);
     printf("\nAn optimal solution :\n");
     for (int i = 0; i < numSegments; i++)
     {
-        printf("Segment (y = %Lf * x + %Lf) from points %d to %d with square error %Lf.\n",
+        printf("Segment y = %f * x + %f from points %d to %d with square error %f.\n",
                results[i].first, results[i].second, startSegment[i], endSegment[i], errors[i]);
     }
 }

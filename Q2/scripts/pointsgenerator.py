@@ -20,9 +20,9 @@ def generate_points(n):
     return points
 
 
-points = generate_points(20)
+points = generate_points(30)
 with open(file_input, "w") as f:
-    f.write(str(20) + "\n")
+    f.write(str(30) + "\n")
     for x, y in points:
         f.write(f"{x} {y}\n")
-    f.write(str(random.randint(0, 100)))
+    f.write(str(random.randint(80, 300)))

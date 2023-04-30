@@ -1,20 +1,20 @@
 5
-1.72727 69.5455
-1.02764 5.65075
-0.63255 1.07693
-0.834391 3.45558
-0.333333 61.3333
+0.31848 -25.6695
+2.80674 193.949
+0.095602 -31.7898
+-1.49348 -73.5038
+0.577471 3.43856
 1 2
-3 5
-6 12
-13 18
-19 20
+3 4
+5 8
+9 10
+11 30
 
-Cost of the optimal solution : 201.570263
+Cost of the optimal solution : 940.865080
 
 An optimal solution :
-Segment (y = 1.727273 * x + 69.545455) from points 1 to 2 with square error 0.000000.
-Segment (y = 1.027638 * x + 5.650754) from points 3 to 5 with square error 3.957286.
-Segment (y = 0.632550 * x + 1.076934) from points 6 to 12 with square error 10.560946.
-Segment (y = 0.834391 * x + 3.455584) from points 13 to 18 with square error 27.052030.
-Segment (y = 0.333333 * x + 61.333333) from points 19 to 20 with square error 0.000000.
+Segment y = 0.318480 * x + -25.669466 from points 1 to 2 with square error 0.000000.
+Segment y = 2.806744 * x + 193.948903 from points 3 to 4 with square error 0.000000.
+Segment y = 0.095602 * x + -31.789833 from points 5 to 8 with square error 25.214616.
+Segment y = -1.493483 * x + -73.503778 from points 9 to 10 with square error 0.000000.
+Segment y = 0.577471 * x + 3.438557 from points 11 to 30 with square error 340.650464.

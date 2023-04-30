@@ -14,7 +14,6 @@
 
 #define N 1005
 #define MAX numeric_limits<double>::infinity()
-#define double long double
 
 using namespace std;
 
@@ -27,7 +26,7 @@ using namespace std;
 class Algorithm
 {
 private:
-    int preX[N], preY[N], preXY[N], preXsqr[N];
+    double preX[N], preY[N], preXY[N], preXsqr[N];
     double m[N][N], c[N][N], E[N][N], opt[N], optSeg[N];
     vector<pair<double, double>> results;
     vector<int> startSegment, endSegment;
